@@ -14,7 +14,7 @@ def preprocess_text(content):
     content = content.lower()
     # Remove any word that contains 'www'
     words = content.split()
-    filtered_words = [word for word in words if "www" not in word]
+    filtered_words = [word for word in words if ("www" and "http") not in word]
     return " ".join(filtered_words)
 
 data = []
